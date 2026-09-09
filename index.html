@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+       <div id="parent">
+    <div id="time">
+
+    </div>
+     <div id="child">
+        <div class="clock" id="clock">00:00:00</div>
+        <div class="greeting" id="greeting"></div>
+
+        <div class="display" id="display">
+         <input type="text" id="dis" disabled>
+        </div>
+     
+     <br>
+     <button onclick="clearDisplay()">AC</button>
+     <button onclick="clearDispla()">DE</button>
+     <button onclick="append('/')" id="divs">/</button>
+     <button onclick="append('+')" id="add">+</button>
+     <br>
+     <button onclick="append('7')">7</button>
+     <button onclick="append('8')">8</button>
+     <button onclick="append('9')">9</button>
+     <button onclick="append('-')" id="minus">-</button>
+     <br>
+     <button onclick="append('4')">4</button>
+     <button onclick="append('5')">5</button>
+     <button onclick="append('6')">6</button>
+     <button onclick="append('*')" id="multi">*</button>
+     <br>
+     <button onclick="append('1')">1</button>
+     <button onclick="append('2')">2</button>
+     <button onclick="append('3')">3</button>
+     <button onclick="append('%')" id="percentage">%</button>
+     <br>
+     <button onclick="append('00')">00</button>
+     <button onclick="append('0')">0</button>
+     <button onclick="append('.')" id="decimal">.</button>
+     <button onclick="calculate()" id="equql">=</button>
+    </div>
+    <script>
+        const username=prompt("Enter fullname");
+        const greeting=document.getElementById("greetings");
+
+        function updateClock(){
+            const now=new Date();
+            const hours=String(now.getHours()).padStart(2, '0');
+            const minutes=String(now.getMinutes()).padStart(2, '0');
+            const seconds=String(now.getSeconds()).padStart(2,' 0')
+            document.getElementById('clock').textContent=`${hours}:${minutes}:${seconds}`
+        }
+        setInterval(updateClock,1000);
+        updateClock();
+        function append(blue){
+            document.getElementById("dis").value += blue;
+        }
+        function clearDisplay(){
+            let display = document.getElementById("dis");
+            document.getElementById("dis").value ="";
+        }
+        function clearDispla(){
+            let display = document.getElementById("dis");
+            display.value = display.value.slice(0, -1)
+        }
+        function calculate(){
+            try{
+                document.getElementById("dis").value =
+                eval(document.getElementById("dis").value);
+            } catch {
+                document.getElementById("dis").value="Error";
+            }
+        }
+        let userName=prompt("what is ur Fullname");
+
+        let today=new Date();
+              let hours=today.getHours();
+
+              let greetingElement=document.getElementById("greeting-message");
+
+              if (greetingElement) {
+                let greeting="";
+
+                if (hours >=0 && hour < 12){
+                    greeting = "Good Moring";
+                }
+                else if (hour >= 12 && hour < 16){
+                    greeting ="Good Afternoon";
+                }
+                else if (hour >=16 && hour < 19){
+                    greeting ="Good Evening";
+                }
+                else if (hour >=19 && hour <24){
+                     greeting="Good Night";
+                }
+
+                else {
+                    greeting="No greeting";
+                }
+
+                if (userName){
+                    greetingElement.innerHTML=`${greeting},${userName}`
+
+                }
+                else {
+                    greetingElement.innerHTML=greeting;
+                }
+              }
+              
+    </script>
+   </div>
+</body>
+</html>
