@@ -1,43 +1,245 @@
-#parent{
-    background-color: silver;
-    width: 100%;
+body{
+    font-family: calibri;
+}
+#container{
+    background-image: url(img/lady222.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
     height: 100%;
-    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
 }
-#child{
-    padding: 20px;
+#left{
+    position: absolute;
+    top: 20%;
+    left: 15%;
+    right: 65%;
+}
+#txt1{
+    font-size: 33px;
+    color: rgb(231, 5, 5);
+    font-weight: 500;
+}
+#txt2{
+    font-size: 15px;
+    font-weight: 500;
+}
+#logo{
+    width: 7%;
+    position: absolute;
+    top: 5%;
+    right: 16%;
+}
+#box{
+    width: 16%;
+    height: 48%;
+    background-color: rgb(218, 84, 84);
+    position: absolute;
+    right: 16%;
+    top: 16%;
     border-radius: 10px;
+}
+#txt3{
+    color: white;
     position: absolute;
-    margin-left: 35%;
-    height: 65%;
-    margin-top: 5%;
-    background: linear-gradient(to right,brown,#a2cc62);
-
+    top: 2%;
+    right: 18%;
+    font-size: 14px;
 }
-input{
-    width: 315px;
-    height: 50px;
-    text-align: right;
-    margin-bottom: 10px;
-    font-size: 40px;
+#select{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    position: absolute;
+    top: 12%;
+    left: 2%;
 }
-button{
-    height: 60px;
-    width: 60px;
-    border-radius: 50px;
-    margin-left: 20px;
-    font-size: 25px;
-    background-color: rgb(223, 207, 177);
-    color: grey;
+#country{
+    display: flex;
+    align-items: center;
+    border: 1px solid transparent;
+    color: #fff;
 }
-#equal{
-    height: 120px;
+#country select{
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 12px;
+    padding: 5px 25px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+    outline: none;
+}
+#country::after{
+    content:icon;
+    position: absolute;
+    right: 5px;
+    font-size: 10px;
+    color: white;
+    pointer-events: none;
+}
+select option{
+    color: black;
+}
+#form{
+    position: absolute;
+    top: 22%;
+    left: 10%;
+    font-size: 12px;
+    color: white;
+}
+#user{
+    padding: 6px;
+    width: 170px;
+    background-color: rgba(255, 255, 255, 0);
+    border: 1px solid white;
+    border-radius: 8px;
+    background-image: url(img/Screenshot__1_-removebg-preview.png);
+    background-size: 12px;
+    background-repeat: no-repeat;
+    background-position-x: 6px;
+    background-position-y: 7px;
+}
+#user::placeholder{
+    color: #fff;
+    font-size: 14px;
+    left: 15%;
     position: absolute;
 }
-#clock{
-    font-size: x-large;
-    margin-left: 75%;
+#txt4{
+    font-size: 11px;
 }
-#greeting{
-    font-size: larger;
+#log{
+    padding: 6px;
+    width: 185px;
+    background-color: rgb(148, 9, 9);
+    border: 1px solid white;
+    border-radius: 8px;
+}
+#bt{
+    font-weight: 600;
+}
+a{
+    text-decoration: none;
+    color: white
+}
+#for{
+    position: absolute;
+    left: 6%;
+}
+#reg{
+    padding: 6px;
+    width: 185px;
+    background-color: rgb(20, 8, 8);
+    border: none;
+    border-radius: 3px;
+    font-size: 11px;
+}
+#bottom{
+    height: 18%;
+    width: 100%;
+    background-color: #18171793;
+    position: absolute;
+    bottom: 0;
+}
+#sub1{
+    width: 21%;
+    height: 80%;
+    position: absolute;
+    left: 16%;
+    bottom: 9%;
+    background-color: rgba(255, 255, 255, 0);
+    border-radius: 10px;
+    border: 1px solid white;
+}
+#log2{
+    height: 85%;
+    position: absolute;
+    bottom: 8%;
+    left: 1%;
+    border-radius: 38px;
+}
+#txt5{
+    position: absolute;
+    top: 5%;
+    left: 30%;
+    font-weight: bold;
+    font-size: 17px;
+    color: #fff;
+}
+#txt6{
+    position: absolute;
+    bottom: 8%;
+    left: 30%;
+    font-size: 10px;
+    color: #fff;
+}
+#sub2{
+    width: 21%;
+    height: 80%;
+    position: absolute;
+    left: 39%;
+    bottom: 9%;
+    background-color: rgba(255, 255, 255, 0);
+    border-radius: 10px;
+    border: 1px solid white;
+}
+#log3{
+    height: 92%;
+    position: absolute;
+    bottom: 4%;
+    left: 1%;
+    border-radius: 45px;
+}
+#txt7{
+    position: absolute;
+    top: 5%;
+    left: 30%;
+    font-weight: bold;
+    font-size: 17px;
+    color: #fff;
+}
+#txt8{
+    position: absolute;
+    bottom: 8%;
+    left: 30%;
+    font-size: 10px;
+    color: #fff;
+}
+#sub3{
+    width: 21%;
+    height: 80%;
+    position: absolute;
+    left: 62%;
+    bottom: 9%;
+    background-color: rgba(255, 255, 255, 0);
+    border-radius: 10px;
+    border: 1px solid white;
+}
+#log4{
+    height: 92%;
+    position: absolute;
+    bottom: 4%;
+    left: 1%;
+    border-radius: 85px;
+}
+#txt9{
+    position: absolute;
+    top: 5%;
+    left: 30%;
+    font-weight: bold;
+    font-size: 17px;
+    color: #fff;
+}
+#txt10{
+    position: absolute;
+    bottom: 8%;
+    left: 30%;
+    font-size: 10px;
+    color: #fff;
 }
